@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+           
+
+
+</head>
+
+<body>
+    <%- include('header') %> 
+
+    <div class="menu"> 
+    </div>
+    <div class="measure p2">
+    <div class="search">
+        <a href="\logout">logout</a>
+  <p class="h5">
+        Card Menu 
+        <a href="/filter?sort=Card_ID">Card ID (Ascending) </a> |
+        <a href="/filter?sort=Name">Pokemon name (Ascending) </a> | 
+        <a href="/filter?sort=Name DESC">Pokemon name (Descending)</a>
+  </div>
+        <div style="display: flex; flex-wrap: wrap;">
+                        <% pokemonlist.forEach((pokemon)=> { %>
+                <blockquote style=" flex-grow: 1; flex-basis: 15%; margin: 20px; min-height: 300px;">                    <div class="grd-row-col-5-6">
+                    <a href="/Cardinfo?eid=<%= pokemon.Card_ID %>">
+                       ID: <%= pokemon.Card_ID %>
+                    </a>
+                    <div class="grd-row-col-1-6">
+                      Name: <%= pokemon.Name %>
+                    </div>
+                      <div class="grd-row-col-1-6">
+                        <a href="/Cardinfo?eid=<%= pokemon.Card_ID %>">
+                        <img class="Img" src="<%= pokemon.ImgPath %>" />
+                        </a>
+                        </div>
+                </blockquote>
+                
+            <% }); %>
+           
+        </div>
+    </div>
+
+    <%- include("footerScript") %>
+    
+    
+</body>
+
+</html>
+

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="icon" type="x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="/" class="brand">Pokemon</a>
+        <div class="menu">
+        <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="/admin/addmember" id="signupbtn1">Sign Up</a>
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header> 
+    
+ <main>
+    <div>
+        <form class="loginForm" action="/" method="POST">
+            <p id="loginfields">
+                username : <input name="usernameField" >
+                password : <input name="passwordField" >
+                
+            </p>
+            <input type="submit" value="login">
+        </form>
+    </div>
+</main>
+
+<%- include("footerScript") %>
+
+</body>
+</html>

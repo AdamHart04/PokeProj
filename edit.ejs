@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon edit list</title>
+    <link rel="icon" type="x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <%- include('header') %> 
+        <h1 id="etitle">EDIT POKEMON</h1>
+    <table>
+            <% pokemonlist.forEach((pokemon)=> { %>  
+                <tr>
+                    <td><%= pokemon.Name %></td>
+                    <td style="text-align: center;">
+                        <a href='/editpokemon?eid=<%= pokemon.Card_ID %>'>edit</a>
+                    </td>
+                    <td style="text-align: center;"> 
+                        <a href='/deletepokemon?eid=<%= pokemon.Card_ID %>'>Delete</a>
+                     </td>
+                </tr>
+            <% }); %>
+    </table>
+    <nav>
+        <% for(i=1; i <= num_pages; i++ ){ %>
+
+            <a href="/editp?page=<%= i %>"><%= i %></a> | 
+
+        <% }  %>
+    </nav>
+
+    <%- include("footerScript") %>
+
+</body>
+</html>
