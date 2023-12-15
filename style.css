@@ -1,0 +1,337 @@
+  /* not visited link */
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: red;
+  }
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }
+
+body{
+    grid-template-columns: 1fr min(90rem,90%) 1fr;
+    background: url(https://w.wallhaven.cc/full/k7/wallhaven-k7q9l6.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.Img{
+margin-left: 20px;
+}
+
+img {
+  opacity: 1.0;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header{
+  z-index: 999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+body>header{
+  background-color:rgb(252, 252, 131);
+}
+
+div.measure.p2{
+  background-color:rgba(255, 255, 255, 0.233);
+
+}
+
+header .brand{
+  color: red;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: double;
+  text-decoration-color: yellow;
+  text-underline-offset: 13px;
+  letter-spacing: 2px;
+  font-family: 'Pokemon Solid', sans-serif;                    
+}
+
+header .brand:hover{
+text-decoration-color: grey;
+}
+
+header a.brand:hover{
+  color: black;
+}
+
+  header .menu{
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+header .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  background: #fff;
+  margin: 0px 80px;
+  padding: 0px 35px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+header .menu a:hover{
+color:black;
+background: lightseagreen;
+}
+
+.search{
+  padding-left: 10px;
+  padding-top: 60px;
+  margin-top: 25px;
+}
+
+p.h5{
+  margin-top: 35px;
+  font-weight: bold;
+  background-color: white;
+}
+
+header .btn{
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 930px){
+header .btn{
+  display: block;
+}
+
+header .menu{
+  position: fixed;
+  background: lightcoral;
+  flex-direction: column;
+  min-width: 400px;
+  height: 100vh;
+  top: 0;
+  right: -100%;
+  padding: 60px 30px;
+  transition: 0.5s;
+  transition-property: right;
+}
+
+header .menu .close-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+margin: 25px;
+}
+
+header .menu a{
+  display: block;
+  font-size: 25px;
+  margin: 20px;
+  padding: 0px 15px;
+  }
+}
+
+header .menu.active{
+  right: 0;
+}
+
+main{
+  padding-top: 80px;
+}
+
+div.grd{
+  margin-top: 150px;
+}
+
+/* Style all input fields */
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #ffffff;
+  color: #000;
+  position: relative;
+  padding-left: 55px;
+  padding-top: 50px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 16px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content:"\2713";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "\0078";
+}
+
+table{
+  margin-top: 130px;
+  background: white;
+}
+
+nav {
+  position: relative;
+  top: 290px;
+  right: 300px;
+}
+
+td{
+font-weight: bold;
+
+}
+
+h1#etitle{
+  margin-top: 100px;
+  padding-right: 80px;
+  text-decoration: underline;
+  background-color: white;
+}
+
+form.loginForm{
+  margin-top: 110px;
+  width: 350px;
+  outline:outset;
+  outline-offset:25px;
+  outline-color: lightcoral;
+  outline-width: 8px;
+  background-color: white;
+}
+
+p#loginfields{
+  font-weight: bold;
+}
+
+form.my1{
+  margin-top: -14px;
+  padding: 15px;
+  outline:outset;
+  outline-offset:40px;
+  outline-color: lightcoral;
+  outline-width: 8px;
+  background-color: white;
+}
+
+div#signin.menu{
+  display: grid;
+  padding-right: 20px;
+  margin-top: 15px;
+}
+
+form#updateform1{
+  margin-top: 150px;
+  background-color: white;
+  padding: 15px;
+}
+
+form#updateform2{
+  margin-top: 150px;
+  background-color: white;
+  padding: 15px;
+}
+
+main#dashmenu{
+  margin-top: 32px;
+  background-color: white;
+}
+
+a#signupbtn1{
+  height: 45px;
+
+}
+
+img#BigImage{
+  width: 350px;
+  height: 465px;
+  margin-right: 100px;
+  margin-top: 160px;
+}
+
+div.CardInfo{
+margin-top: 100px;
+font-weight: bold;
+margin-right: 10px;
+background-color: white;
+}
+
+div.CardInfo2{
+  margin-top: 100px;
+  font-weight: bold;
+  background-color: white;
+padding-right: 25px;
+}
+
+input.inputfield{
+  border: 3px black solid;
+  background-color: aquamarine;
+}
+
+input#descrip.inputfield{
+  width: 400px;
+  font-size: 15px;
+}

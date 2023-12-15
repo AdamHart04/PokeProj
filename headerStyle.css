@@ -1,0 +1,69 @@
+header{
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+  }
+  
+  header .brand{
+    color: red;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: yellow;
+    text-underline-offset: 13px;
+    letter-spacing: 2px;
+    font-family: 'Pokemon Solid', sans-serif;                    
+  }
+  
+  header .brand:hover{
+  text-decoration-color: red;
+  }
+  
+  header a.brand:hover{
+    color: yellow;
+  }
+  
+    header .menu{
+      position: relative;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  
+  header .menu a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    background: #fff;
+    margin: 0px 65px;
+    padding: 0px 35px;
+    border-radius: 20px;
+  }
+  
+  header .menu a:hover{
+  color:black;
+  background: lightseagreen;
+  }
+
+  .loginForm{
+display: block;
+position: relative;
+top: 110px;
+left: -170px;
+  }
+
+  body{
+    background: url(https://w.wallhaven.cc/full/k7/wallhaven-k7q9l6.png);
+  background-position: center;
+  }
+
+  
+  
