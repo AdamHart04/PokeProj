@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/512px-Pok%C3%A9_Ball_icon.svg.png">
+     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <a href="/menu" class="brand">Pokemon</a>
+        <div class="menu">
+        <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="#">Home</a>
+        <a href="#">Add Cards</a>
+        <a href="#">Edit Cards</a>
+        <a href="#">Dashboard</a>
+    
+        </div>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+        <div class="grd">
+            <div class="h5">
+                Add a Pokemon Card...
+            </div>
+            <form action="/admin/add" method="POST" role="form" class="my1" >
+                <label for="pokemonname">Pokemon Name</label>
+                <input type="text" name="pokemonname">
+                <label for="pkHP">HP</label>
+                <input type="text" name="pkHP">
+                <label for="pkRarity">Pokemon Card Rarity</label>
+                <select id="pkRarity" name="pkRarity">
+                    <option value="Common">Common</option>
+                    <option value="Uncommon">Uncommon</option>
+                    <option value="Rare">Rare</option>
+                </select>
+                <label for="pkType">Pokemon Typing</label>
+                <select id="pkType" name="pkType">
+                    <option value="Normal">Normal</option>
+                    <option value="Fire">Fire</option>
+                    <option value="Water">Water</option>
+                    <option value="Grass">Grass</option>
+                    <option value="Flying">Flying</option>
+                    <option value="Fighting">Fighting</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Electric">Electric</option>
+                    <option value="Ground">Ground</option>
+                    <option value="Psychic">Psychic</option>
+                    <option value="Ice">Ice</option>
+                    <option value="Bug">Bug</option>
+                    <option value="Ghost">Ghost</option>
+                    <option value="Steel">Steel</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Dark</option>
+                    <option value="Fairy">Fairy</option>
+                    <option value="Rock">Rock</option>
+                </select>
+                <label for="image">Image URL</label>
+                <input type="text" name="image">
+                <label for="userID">Member ID</label>
+                <input type="text" name="userID">
+                <input type="submit" value="Add Pokemon" class="btn--blue">
+              </form>
+              
+
+        </div>
+        <%- include('footerScript') %>
+
+</body>
+</html>
